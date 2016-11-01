@@ -1,0 +1,10 @@
+{
+  "MongoDbParameters": {
+      "connectionString": "mongodb://127.0.0.1:27017/lottery",
+      "server": "127.0.0.1:27017",
+      "database" : "lottery"
+  }
+}
+,
+      "server": "dbusername:Abc!_587@ds019076.mlab.com:19076",
+      "database" : "agirenko"

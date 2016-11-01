@@ -1,0 +1,23 @@
+<div #controlsDiv>
+  <div style="margin-bottom:5px;margin-top:5px;">
+  <span *ngIf="mongoCollectionsList !== null">Select mongoDb collection:&nbsp;
+    <select #selectCollection (change)="collectionSelected(selectCollection.value)">
+      <option *ngFor="let item of mongoCollectionsList" value={{item}}>{{item}}</option>
+    </select></span>
+    <span style="margin-left:10px">Selected Collection:&nbsp;<input width="150px" #selCollection value="{{selectedCollection}}"/></span>
+  </div>
+  <div>
+  <span style="">
+    <button (click)="readCsvClicked()">Read Csv File</button></span><span style="margin-left:10px;" *ngIf="fileContent !==null">
+  <button (click)="copyCsvClicked(selCollection.value)">Copy Csv to MongoDb</button></span>
+  </div>
+  <h4>Csv file name: {{csvFileName}}</h4>
+</div>
+
+<p-dataTable *ngIf="fileContent !== null" [value]="fileContent" [paginator]="true" [rows]="10" [responsive]="true">
+  <p-column *ngFor="let col of columnsNames" [field]="col" [header]="col"></p-column>
+</p-dataTable>
+
+<div style="visibility:hidden;height:0px;margin: 0; padding:0;">
+  <button (click)="hiddenUpdate()" #myButton></button>
+</div>
