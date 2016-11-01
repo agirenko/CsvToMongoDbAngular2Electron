@@ -1,5 +1,5 @@
 {
   "MongoDbParameters": {
-      "connectionString": "mongodb://dbusername:Abc!_587@ds019076.mlab.com:19076/agirenko"
+      "connectionString": "mongodb://<user>:<pass>@ds019076.mlab.com:19076/agirenko"
   }
 }

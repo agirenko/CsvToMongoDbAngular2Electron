@@ -6,5 +6,5 @@
   }
 }
 ,
-      "server": "dbusername:Abc!_587@ds019076.mlab.com:19076",
+      "server": "<user>:<pass>@076.mlab.com:19076",
       "database" : "agirenko"
